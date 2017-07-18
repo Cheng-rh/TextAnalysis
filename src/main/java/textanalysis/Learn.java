@@ -256,6 +256,7 @@ public class Learn {
    */
   private void readVocab(File file) throws IOException {
     MapCount<String> mc = new MapCount();
+
     BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
     if ( br != null) {
       String temp = null;

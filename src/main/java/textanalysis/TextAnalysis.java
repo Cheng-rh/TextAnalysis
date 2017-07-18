@@ -11,7 +11,45 @@ import java.util.*;
  */
 public class TextAnalysis {
 
-    private static String stopWordTable = "C:\\Users\\sssd\\Desktop\\data\\中文停用词库2.txt";
+    private static String stopWordTable = "src/main/resources/中文停用词库2.txt";
+
+    /**
+     * 将文本和词典中的极性词进行对比
+     * @param text  文本，
+     * @param set   中文极性词典
+     * @return      文本中包含极性此的个数
+     */
+    public List textCompare(String text , Set set) {
+        String[] splitWords = text.split("\n");
+        List lists = new ArrayList();
+        for (int i = 0; i < splitWords.length; i++) {
+            int num = 0;
+            String[] splitLines = splitWords[i].split(" ");
+            for (int j = 0; j < splitLines.length; j++) {
+                if (set.contains(splitLines[j])) {
+                    num++;
+                }
+            }
+            lists.add(num);
+        }
+        return lists;
+    }
+
+    /**
+     * 读取文件，返回Set数据类型
+     * @param path
+     * @return 返回Set数据类型
+     * @throws Exception
+     */
+        public Set<String>  readSet(String path)throws Exception{
+            BufferedReader negWordRead = new BufferedReader(new InputStreamReader(new FileInputStream(new File(path)),"UTF-8"));
+            Set set = new HashSet<String>();
+            String eleWord = null;
+            for(; (eleWord = negWordRead.readLine()) != null;) {
+                set.add(eleWord);
+            }
+            return set;
+        }
 
     /**
      * 将数据转换成libsvm数据格式

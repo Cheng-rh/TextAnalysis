@@ -16,7 +16,6 @@ public class ReadJsonFile {
 
     public static Map<Integer,String> readJsonFile(String jsonPath) throws Exception{
         Map<Integer,String> textMap = new LinkedHashMap<Integer, String>();
-        Sentence sentence = new Sentence();
         File file = new File(jsonPath);
         BufferedReader reader = null;
         StringBuffer laststr = new StringBuffer();
