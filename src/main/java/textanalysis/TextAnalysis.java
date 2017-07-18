@@ -53,8 +53,8 @@ public class TextAnalysis {
 
     /**
      * 将数据转换成libsvm数据格式
-     * @param savapath
-     * @param data
+     * @param savapath    要保存的路径
+     * @param data   未转换之前的数据
      * @throws Exception
      */
     public void data2Svm(String savapath,List<List> data)throws Exception{
@@ -168,8 +168,6 @@ public class TextAnalysis {
         return elem;
     }
 
-
-
     /**
      * 训练word2vec模型，保存
      * @param wordPath
@@ -220,16 +218,13 @@ public class TextAnalysis {
         for(; (stopWord = StopWordFileBr.readLine()) != null;) {
             stopWordSet.add(stopWord);
         }
-
         JiebaSegmenter segmenter = new JiebaSegmenter();
         List<SegToken> tokens = segmenter.process(sentence, JiebaSegmenter.SegMode.INDEX);
         StringBuffer tokenizerResult = new StringBuffer();
-//        List<String> tokenizerResult = new ArrayList<String>();
         for (SegToken token : tokens) {
             if (!stopWordSet.contains(token.word)  ){
                 if (token.word != null || token.word != " "){
                     tokenizerResult.append(token.word).append(" ");
-//                    tokenizerResult.add(token.word);
                 }
             }
         }

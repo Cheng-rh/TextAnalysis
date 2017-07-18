@@ -23,7 +23,7 @@ public class Learn {
   private int layerSize = 200;
 
   /**
-   * 上下文窗口大小
+   * 上下文窗口大小，word2vec的相关参数。
    */
   private int window = 5;
 

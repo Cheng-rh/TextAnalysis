@@ -63,5 +63,6 @@ public class MLlibPredict implements PredictModel {
         String savaModelPath = "src/main/resources/model.txt";
         String[] parg = {saveTestPath,savaModelPath,savePredictPath};
         svm_predict.main(parg);
+//        Double predict = svm_predict.main(parg);
     }
 }

@@ -82,7 +82,7 @@ class svm_predict {
 				x[j].value = atof(st.nextToken());
 			}
 
-			double v;
+			double v;     // predict value
 			if (predict_probability==1 && (svm_type==svm_parameter.C_SVC || svm_type==svm_parameter.NU_SVC))
 			{
 				v = svm.svm_predict_probability(model,x,prob_estimates);
@@ -118,7 +118,7 @@ class svm_predict {
 		}
 		else
 			svm_predict.info("Accuracy = "+(double)correct/total*100+
-				 "% ("+correct+"/"+total+") (classification)\n");
+				 "% ("+correct+"/"+total+") (classification)\n");    //correct 预测准确的总数，
 	}
 
 	private static void exit_with_help()
