@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0957d81-cf34-4914-ab91-b7d6f5258f0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/InputPath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/MLlibPredict.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/SentencePredcit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/WordPredict.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/pREDICTModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/libsvmtrain.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/中文停用词库2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredcitTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/FeatureModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/Model.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/Sentence.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/TextAnalysisTest2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/textanalysis/TextAnalysis2Test.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/Learn.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/Learn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/ReadJsonFile.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/ReadJsonFile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/tokenizerResult.txt" afterPath="$PROJECT_DIR$/src/main/resources/tokenizerResult.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/vector.mod" afterPath="$PROJECT_DIR$/src/main/resources/vector.mod" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/svm/svm_predict.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/svm_predict.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/svm/svm_scale.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/svm_scale.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/svm/svm_toy.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/svm_toy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/svm/svm_train.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/svm_train.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/TextAnalysisTest.java" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/TextAnalysisTest.java" />
-    </list>
+    <list default="true" id="e0957d81-cf34-4914-ab91-b7d6f5258f0b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -992,7 +964,7 @@
       <updated>1500166984886</updated>
       <workItem from="1500252343764" duration="24857000" />
       <workItem from="1500338421062" duration="3746000" />
-      <workItem from="1500342222133" duration="15120000" />
+      <workItem from="1500342222133" duration="15308000" />
     </task>
     <task id="LOCAL-00001" summary="新增加根据情感极性词进行的文本分析">
       <created>1500287460162</created>
@@ -1000,7 +972,13 @@
       <option name="project" value="LOCAL" />
       <updated>1500287460162</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="利用工厂设计模式重新真理程序，主程序为SentencePredict.java">
+      <created>1500361611045</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500361611045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1036,7 +1014,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43723000" />
+    <option name="totallyTimeSpent" value="43911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1097,7 +1075,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增加根据情感极性词进行的文本分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增加根据情感极性词进行的文本分析" />
+    <MESSAGE value="利用工厂设计模式重新真理程序，主程序为SentencePredict.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="利用工厂设计模式重新真理程序，主程序为SentencePredict.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
