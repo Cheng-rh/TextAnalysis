@@ -2,6 +2,7 @@ package textanalysis;
 
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.SegToken;
+import org.bytedeco.javacpp.presets.opencv_core;
 
 import java.io.*;
 import java.util.*;
@@ -12,6 +13,35 @@ import java.util.*;
 public class TextAnalysis {
 
     private static String stopWordTable = "src/main/resources/中文停用词库2.txt";
+
+    public Double wordScoreCompare(String[] text , Map<String,Double> wordMAP){
+        Double sum = 0.0;
+        for (Map.Entry<String,Double> entry : wordMAP.entrySet()) {
+            if(Arrays.asList(text).contains(entry.getKey())){
+//                System.out.println("包含极性词为："+entry.getKey()+"--对应权值为："+entry.getValue());
+                sum = sum +entry.getValue();
+            }
+        }
+    return sum;
+    }
+
+
+    /**
+     * 读取word-score 文档 返回的Map,
+     * @param path
+     * @return  键值 文本词-权值
+     * @throws Exception
+     */
+    public Map<String,Double> readText2Map(String path) throws Exception{
+        HashMap<String, Double> textMap = new HashMap<String, Double>();
+        BufferedReader textRead = new BufferedReader(new InputStreamReader(new FileInputStream(new File(path)),"UTF-8"));
+        String  eleWord = null;
+        while((eleWord = textRead.readLine()) != null ){
+            String[] temps = eleWord.split(" ");
+            textMap.put(temps[0],Double.parseDouble(temps[1]));
+        }
+        return textMap;
+    }
 
     /**
      * 将文本和词典中的极性词进行对比
@@ -34,6 +64,7 @@ public class TextAnalysis {
         }
         return lists;
     }
+
 
     /**
      * 读取文件，返回Set数据类型
@@ -189,7 +220,7 @@ public class TextAnalysis {
     public Map<Integer,String> readText(String path)throws Exception{
         Map<Integer,String> text = new HashMap <Integer, String>();
         StringBuffer textStringBuffer = new StringBuffer();
-        BufferedReader read = new BufferedReader(new InputStreamReader(new FileInputStream(path),"gbk"));
+        BufferedReader read = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF-8"));
         String line = null;
         while( (line=read.readLine()) != null ){
             textStringBuffer.append(TextAnalysis.getSplitWord(line)).append("\n");

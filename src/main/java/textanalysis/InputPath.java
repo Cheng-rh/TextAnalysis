@@ -5,8 +5,19 @@ package textanalysis;
  */
 public class InputPath {
 
-    public String negPATH;
-    public String posPath;
+
+    public String path;      // word-score 的路径
+    public String negPATH;   //neg 的路径
+    public String posPath;   //pos 的路径
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
 
     public String getNegPATH() {
         return negPATH;

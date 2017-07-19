@@ -8,8 +8,10 @@ public class PredictFactory {
     public static PredictModel newInstance( int mmethod){
         if ( mmethod ==1 ){
             return new MLlibPredict();
-        }else {
+        }else if (mmethod == 2) {
             return new WordPredict();
+        }else{
+            return new WordScorePredict();
         }
     }
 }

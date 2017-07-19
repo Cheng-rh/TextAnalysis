@@ -16,27 +16,32 @@ public class WordPredict implements PredictModel {
     public void init(InputPath inputPath) throws Exception {
         String negWordPath  =  "C:\\Users\\sssd\\Desktop\\data\\NTUSD_negative_simplified.txt";
         String posWOrdPath = "C:\\Users\\sssd\\Desktop\\data\\NTUSD_positive_simplified.txt";
+//        String negWordPath = inputPath.getNegPATH();
+//        String posWOrdPath = inputPath.getPosPath();
         negSet = textAnalysis.readSet(negWordPath);
         posSet = textAnalysis.readSet(posWOrdPath);
     }
 
-    public void predict(String sentence, int label) throws Exception {
-
+    public List predict(String sentence) throws Exception {
         String tetxSplits = TextAnalysis.getSplitWord(sentence);
-        List negLists = textAnalysis.textCompare(tetxSplits,negSet);
-        List psoLists = textAnalysis.textCompare(tetxSplits,posSet);
+
+        // 句子在负面词的相关性
+        List psoLists = textAnalysis.textCompare(tetxSplits, posSet);
+
+        // 句子在负面词的相关性
+        List negLists = textAnalysis.textCompare(tetxSplits, negSet);
 
         List predictList = new ArrayList();
-        for(int i =0;i<negLists.size();i++){
-            if(Integer.parseInt(negLists.get(i).toString()) > Integer.parseInt(psoLists.get(i).toString())){
-                predictList.add("N");
-            }else if(Integer.parseInt(negLists.get(i).toString()) < Integer.parseInt(psoLists.get(i).toString())){
-                predictList.add("P");
-            }else {
-                predictList.add("C");
+        for(int i =0; i < negLists.size(); i++){
+//            predictList.add((Integer) negLists.get(i) - (Integer)psoLists.get(i));
+            if((Integer) negLists.get(i) > (Integer)psoLists.get(i)){
+                predictList.add(1);
+            } else if((Integer) negLists.get(i) < (Integer)psoLists.get(i)){
+                predictList.add(-1);
+            } else {
+                predictList.add(0);
             }
         }
-
-        System.out.println("------预测："+predictList.get(0).toString());
+        return predictList;
     }
 }

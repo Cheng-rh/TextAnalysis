@@ -3,6 +3,8 @@ package textanalysis;
 import libsvm.*;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 class svm_predict {
@@ -36,12 +38,13 @@ class svm_predict {
 		return Integer.parseInt(s);
 	}
 
-	private static void predict(BufferedReader input, DataOutputStream output, svm_model model, int predict_probability) throws IOException
+	private static List predict(BufferedReader input, DataOutputStream output, svm_model model, int predict_probability) throws IOException
 	{
 		int correct = 0;
 		int total = 0;
 		double error = 0;
 		double sumv = 0, sumy = 0, sumvv = 0, sumyy = 0, sumvy = 0;
+		List predictLabel = new ArrayList();
 
 		int svm_type=svm.svm_get_svm_type(model);
 		int nr_class=svm.svm_get_nr_class(model);
@@ -99,6 +102,7 @@ class svm_predict {
 
 			if(v == target)
 				++correct;
+			predictLabel.add(v);
 			error += (v-target)*(v-target);
 			sumv += v;
 			sumy += target;
@@ -115,10 +119,11 @@ class svm_predict {
 				 ((total*sumvy-sumv*sumy)*(total*sumvy-sumv*sumy))/
 				 ((total*sumvv-sumv*sumv)*(total*sumyy-sumy*sumy))+
 				 " (regression)\n");
+		} else{
+			/*svm_predict.info("Accuracy = "+(double)correct/total*100+
+					"% ("+correct+"/"+total+") (classification)\n"); */   //correct 预测准确的总数，
 		}
-		else
-			svm_predict.info("Accuracy = "+(double)correct/total*100+
-				 "% ("+correct+"/"+total+") (classification)\n");    //correct 预测准确的总数，
+	    return predictLabel;
 	}
 
 	private static void exit_with_help()
@@ -130,9 +135,10 @@ class svm_predict {
 		System.exit(1);
 	}
 
-	public static void main(String argv[]) throws IOException
+	public static List main(String argv[]) throws IOException
 	{
 		int i, predict_probability=0;
+		List predictLabel = new ArrayList();
         	svm_print_string = svm_print_stdout;
 
 		// parse options
@@ -176,7 +182,8 @@ class svm_predict {
 					svm_predict.info("Model supports probability estimates, but disabled in prediction.\n");
 				}
 			}
-			predict(input,output,model,predict_probability);
+			List predict = predict(input,output,model,predict_probability);
+			predictLabel.add(predict.get(0));
 			input.close();
 			output.close();
 		} 
@@ -188,5 +195,6 @@ class svm_predict {
 		{
 			exit_with_help();
 		}
+		return predictLabel;
 	}
 }
