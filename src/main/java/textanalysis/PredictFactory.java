@@ -10,8 +10,10 @@ public class PredictFactory {
             return new MLlibPredict();
         }else if (mmethod == 2) {
             return new WordPredict();
-        }else{
+        }else if (mmethod ==3){
             return new WordScorePredict();
+        }else{
+            return new WordScordPredict2();
         }
     }
 }

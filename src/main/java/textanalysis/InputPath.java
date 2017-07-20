@@ -6,9 +6,38 @@ package textanalysis;
 public class InputPath {
 
 
-    public String path;      // word-score 的路径
+    public String path;      // word-score 的路径(wordScore)
+
     public String negPATH;   //neg 的路径
     public String posPath;   //pos 的路径
+
+    public String emotionPath;
+    public String denyPath;
+    public String levelPath;
+
+    public String getEmotionPath() {
+        return emotionPath;
+    }
+
+    public void setEmotionPath(String emotionPath) {
+        this.emotionPath = emotionPath;
+    }
+
+    public String getDenyPath() {
+        return denyPath;
+    }
+
+    public void setDenyPath(String denyPath) {
+        this.denyPath = denyPath;
+    }
+
+    public String getLevelPath() {
+        return levelPath;
+    }
+
+    public void setLevelPath(String levelPath) {
+        this.levelPath = levelPath;
+    }
 
     public String getPath() {
         return path;

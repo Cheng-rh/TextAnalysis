@@ -1,19 +1,66 @@
 package textanalysis;
 
+import com.google.common.io.Files;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.SegToken;
 import org.bytedeco.javacpp.presets.opencv_core;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 
 /**
+ * 实现文本分析的相关方法
  * Created by hui on 2017/7/16.
  */
 public class TextAnalysis {
 
-    private static String stopWordTable = "src/main/resources/中文停用词库2.txt";
+    private static String stopWordTable = "src/main/resources/中文停用词库3.ml";
 
+    /**
+     * 根据情感词库+否定词库+程度词库计算语句的权值
+     * @param senWord   情感词典
+     * @param notWord   否定词典
+     * @param degreeWord  程度词典
+     * @param splitSentence  分词+去除停留词后的语句
+     * @return   返回的是该句的权值。
+     */
+    public Double scoreSent(Map<Integer,Double> senWord, Map<Integer,Double> notWord, Map<Integer,Double> degreeWord,String[] splitSentence){
+        Double weiht = 1.0;
+        Double score =0.0;
+        List<Integer> senLoc = new ArrayList<Integer>(senWord.keySet());
+        List<Integer> notLoc  =new ArrayList<Integer>(notWord.keySet());
+        List<Integer> degreeLoc =new ArrayList<Integer>(degreeWord.keySet());
+        int senloc = -1;
+        for(int i =0;i<splitSentence.length; ){
+            if (senLoc.contains(i)){
+                senloc +=1;
+                score +=weiht*senWord.get(i);
+                if (senloc < senLoc.size()-1){
+                    for(int j = senLoc.get(senloc); j < senLoc.get(senloc+1) ; j++){
+                        if (notLoc.contains(j)){
+                            weiht *= -1.0;
+                        }else if (degreeLoc.contains(j)){
+                            weiht *= degreeWord.get(j);
+                        }
+                    }
+                }
+            }
+            if(senloc < senLoc.size()-1){
+                i = senLoc.get(senloc+1);
+            }else{
+                break;
+            }
+        }
+        return score;
+    }
+
+    /**
+     * 将文本和词权字典进行匹配，返回的是的该文本所对应的词权的值
+     * @param text
+     * @param wordMAP
+     * @return
+     */
     public Double wordScoreCompare(String[] text , Map<String,Double> wordMAP){
         Double sum = 0.0;
         for (Map.Entry<String,Double> entry : wordMAP.entrySet()) {
@@ -33,7 +80,7 @@ public class TextAnalysis {
      * @throws Exception
      */
     public Map<String,Double> readText2Map(String path) throws Exception{
-        HashMap<String, Double> textMap = new HashMap<String, Double>();
+        HashMap<String, Double> textMap = new LinkedHashMap<String, Double>();
         BufferedReader textRead = new BufferedReader(new InputStreamReader(new FileInputStream(new File(path)),"UTF-8"));
         String  eleWord = null;
         while((eleWord = textRead.readLine()) != null ){

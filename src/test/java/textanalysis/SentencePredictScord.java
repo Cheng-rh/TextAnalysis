@@ -24,13 +24,13 @@ public class SentencePredictScord {
         inputPath.setPath(path);
         sentencePredcit.initTrain(method,inputPath);
 
-        List<String> lines = Files.readLines(new File("C:\\Users\\sssd\\Desktop\\data\\train\\posdata.txt"), Charset.forName("UTF-8"));
+        List<String> lines = Files.readLines(new File("C:\\Users\\sssd\\Desktop\\data\\train\\posdata3.txt"), Charset.forName("UTF-8"));
         int posNum = 1;
         int posNumPre = 0;
         long posstartT = System.currentTimeMillis();
         for (String line : lines) {
             List preLabel = sentencePredcit.sensePredict(line);
-//            System.out.println(posNum + " 预测值为："+preLabel.get(0));
+            System.out.println(posNum + " 预测值为："+preLabel.get(0));
             posNum++;
             if ((Double)preLabel.get(0) > 0.0){
                 posNumPre++;
@@ -42,7 +42,7 @@ public class SentencePredictScord {
         System.out.println(String.format("%d 条文本耗时 %d ms, 平均： %f ms/条", lines.size(), (posendT - posstartT), ((posendT - posstartT) / (float)posNum)));
 
 
-        List<String> negLines = Files.readLines(new File("C:\\Users\\sssd\\Desktop\\data\\train\\negdata.txt"), Charset.forName("UTF-8"));
+        List<String> negLines = Files.readLines(new File("C:\\Users\\sssd\\Desktop\\data\\train\\negdata3.txt"), Charset.forName("UTF-8"));
         int negNum = 1;
         int negNumPre = 0;
         long negstartT = System.currentTimeMillis();
