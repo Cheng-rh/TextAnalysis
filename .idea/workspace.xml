@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0957d81-cf34-4914-ab91-b7d6f5258f0b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" />
-    </list>
+    <list default="true" id="e0957d81-cf34-4914-ab91-b7d6f5258f0b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -1092,7 +1087,7 @@
       <workItem from="1500424605026" duration="30974000" />
       <workItem from="1500464111628" duration="1335000" />
       <workItem from="1500514638008" duration="23796000" />
-      <workItem from="1500598131898" duration="5045000" />
+      <workItem from="1500598131898" duration="5153000" />
     </task>
     <task id="LOCAL-00001" summary="新增加根据情感极性词进行的文本分析">
       <created>1500287460162</created>
@@ -1136,7 +1131,13 @@
       <option name="project" value="LOCAL" />
       <updated>1500542374763</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改将词权求平均值">
+      <created>1500603326964</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1500603326964</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1172,7 +1173,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111424000" />
+    <option name="totallyTimeSpent" value="111532000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1240,7 +1241,8 @@
     <MESSAGE value="利用工厂设计模式重新整理程序，主程序为SentencePredict.java" />
     <MESSAGE value="修改整理程序，并添加词权的方式，" />
     <MESSAGE value="添加程序，通过词权计算时（情感词典+否定词+程度副词）" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加程序，通过词权计算时（情感词典+否定词+程度副词）" />
+    <MESSAGE value="修改将词权求平均值" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改将词权求平均值" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
