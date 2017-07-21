@@ -1,12 +1,11 @@
 package textanalysis;
 
-import com.google.common.io.Files;
 import com.huaban.analysis.jieba.JiebaSegmenter;
 import com.huaban.analysis.jieba.SegToken;
-import org.bytedeco.javacpp.presets.opencv_core;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.util.*;
 
 /**
@@ -15,7 +14,35 @@ import java.util.*;
  */
 public class TextAnalysis {
 
-    private static String stopWordTable = "src/main/resources/中文停用词库3.ml";
+    //private static String stopWordTable = "src/main/resources/中文停用词库.ml";
+    static Set STOP_WORD_SET = new HashSet<String>();   //用来存放停用词的集合
+
+    /**
+     * 读取停用词文件,并返回 TOP_WORD_SET Set.
+     */
+    static {
+
+        ClassLoader classLoader = TextAnalysis.class.getClassLoader();
+        if(classLoader == null) {
+            classLoader = Thread.currentThread().getContextClassLoader();
+        }
+
+        InputStream inputStream = classLoader.getResourceAsStream("中文停用词库3.ml");
+
+        BufferedReader stopWordFileBr = null;
+        try {
+            stopWordFileBr = new BufferedReader(new InputStreamReader(inputStream,"UTF-8"));
+            String stopWord =  null;
+            for(; (stopWord = stopWordFileBr.readLine()) != null;) {
+                STOP_WORD_SET.add(stopWord);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(stopWordFileBr);
+        }
+    }
 
     /**
      * 根据情感词库+否定词库+程度词库计算语句的权值
@@ -284,30 +311,30 @@ public class TextAnalysis {
 
     /**
      * 按行读取文本进行分词，并去掉停留词
+     *
+     *
      * @param textLine
      * @return 分词之后的文本
      * @throws Exception
      */
-    public static String getSplitWord(String textLine)throws Exception{
+    public static String getSplitWord(String textLine) throws Exception {
         String sentence = textLine;
-        BufferedReader StopWordFileBr = new BufferedReader(new InputStreamReader(new FileInputStream(new File(stopWordTable)),"gbk"));
-        Set stopWordSet = new HashSet<String>(); //用来存放停用词的集合
-        String stopWord =  null;
-        for(; (stopWord = StopWordFileBr.readLine()) != null;) {
-            stopWordSet.add(stopWord);
-        }
+
         JiebaSegmenter segmenter = new JiebaSegmenter();
         List<SegToken> tokens = segmenter.process(sentence, JiebaSegmenter.SegMode.INDEX);
         StringBuffer tokenizerResult = new StringBuffer();
         for (SegToken token : tokens) {
-            if (!stopWordSet.contains(token.word)  ){
-                if (token.word != null || token.word != " "){
+            String word = token.word;
+            if(StringUtils.isBlank(word) || word.length() <= 1) {
+                continue;
+            }
+            if (!STOP_WORD_SET.contains(word)  ){
                     tokenizerResult.append(token.word).append(" ");
-                }
             }
         }
         tokenizerResult.deleteCharAt(tokenizerResult.length()-1);
         return tokenizerResult.toString();
+
     }
 
 }
