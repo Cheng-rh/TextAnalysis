@@ -38,6 +38,7 @@ public class WordScordPredict2 implements PredictModel {
         //将句子中的各类分词分别存储并记录其位置
         for(int i = 0; i<splitSentence.length ; i++){
             if( senDict.keySet().contains(splitSentence[i]) && !notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i]) ){
+                // 权重/句子长度，
                 senWord.put(i,senDict.get(splitSentence[i]));
             }else if (notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i])){
                 notWord.put(i,-1.0);
@@ -48,7 +49,7 @@ public class WordScordPredict2 implements PredictModel {
 
         //情感聚合
         Double score = textAnalysis.scoreSent(senWord,notWord,degreeWord,splitSentence);
-        preLab.add(score);
+        preLab.add(Math.tanh(score));
         return preLab;
     }
 }

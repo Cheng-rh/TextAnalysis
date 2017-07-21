@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0957d81-cf34-4914-ab91-b7d6f5258f0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/中文停用词库2.ml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/中文停用词库2.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/InputPath.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/InputPath.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/vector.mod" afterPath="$PROJECT_DIR$/src/main/resources/vector.mod" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" afterPath="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" afterPath="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,14 +30,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SentencePredictScord2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SentencePredictScord2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.30166668">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SentencePredcit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/SentencePredcit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,43 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SentencePredcit.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/SentencePredcit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="WordScordPredict2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1010#1027#0" expanded="true" />
-                <element signature="e#1086#1103#0" expanded="true" />
-                <element signature="e#1165#1182#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextAnalysis.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TextAnalysis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.6">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding>
-                <element signature="e#879#888#0" expanded="true" />
-                <element signature="e#952#961#0" expanded="true" />
-                <element signature="e#1027#1036#0" expanded="true" />
-                <element signature="e#2620#2636#0" expanded="true" />
-                <element signature="e#8323#8340#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="1.7171854">
+              <caret line="54" column="44" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,17 +109,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SentencePredict.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredict.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,22 +126,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordPredict.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/WordPredict.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SentencePredictScord.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.933332">
+            <state vertical-scroll-proportion="0.0">
               <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -225,10 +214,10 @@
         <option value="$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/textanalysis/InputPath.java" />
         <option value="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictMlib.java" />
-        <option value="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" />
         <option value="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java" />
         <option value="$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java" />
       </list>
     </option>
   </component>
@@ -302,6 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -428,7 +418,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1102,7 +1091,8 @@
       <workItem from="1500342222133" duration="21671000" />
       <workItem from="1500424605026" duration="30974000" />
       <workItem from="1500464111628" duration="1335000" />
-      <workItem from="1500514638008" duration="21997000" />
+      <workItem from="1500514638008" duration="23796000" />
+      <workItem from="1500598131898" duration="5045000" />
     </task>
     <task id="LOCAL-00001" summary="新增加根据情感极性词进行的文本分析">
       <created>1500287460162</created>
@@ -1140,43 +1130,49 @@
       <option name="project" value="LOCAL" />
       <updated>1500457624306</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加程序，通过词权计算时（情感词典+否定词+程度副词）">
+      <created>1500542374763</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1500542374763</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 06m 54s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 10m 20s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 07m 45s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 10m 38s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 08m 41s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 10m 54s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 10m 26s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 11m 14s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 15m 34s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 12m 50s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 16m 11s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 34m 44s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 16m 22s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 39m 37s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord2_outPrint - 2017.07.20 at 17h 16m 35s.xml">
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 41m 05s.xml">
       <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord_outPrint - 2017.07.20 at 17h 11m 22s.xml">
-      <configuration name="SentencePredictScord.outPrint" configurationId="JUnit" />
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 41m 32s.xml">
+      <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SentencePredictScord_outPrint - 2017.07.20 at 17h 14m 54s.xml">
-      <configuration name="SentencePredictScord.outPrint" configurationId="JUnit" />
+    <history-entry file="SentencePredictScord2_outPrint - 2017.07.21 at 09h 43m 23s.xml">
+      <configuration name="SentencePredictScord2.outPrint" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104580000" />
+    <option name="totallyTimeSpent" value="111424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1197,13 +1193,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5030349" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27457264" sideWeight="0.48608837" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31630436" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25543478" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16521738" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28804347" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21741453" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946581" sideWeight="0.4918415" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1221,6 +1216,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026555387" sideWeight="0.5139116" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32790446" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1243,25 +1239,12 @@
     <MESSAGE value="利用工厂设计模式重新真理程序，主程序为SentencePredict.java" />
     <MESSAGE value="利用工厂设计模式重新整理程序，主程序为SentencePredict.java" />
     <MESSAGE value="修改整理程序，并添加词权的方式，" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改整理程序，并添加词权的方式，" />
+    <MESSAGE value="添加程序，通过词权计算时（情感词典+否定词+程度副词）" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加程序，通过词权计算时（情感词典+否定词+程度副词）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="128" />
+      <option name="time" value="129" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1270,6 +1253,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/WordPredict.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/ReadJsonFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1502,13 +1505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4229765">
@@ -1520,14 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1545,17 +1533,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
           <folding>
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#709#710#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#759#760#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1572,9 +1560,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredict.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,7 +1572,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredcitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1594,10 +1606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredcitTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="70" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="85" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1610,56 +1622,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.6">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
-            <element signature="e#879#888#0" expanded="true" />
-            <element signature="e#952#961#0" expanded="true" />
-            <element signature="e#1027#1036#0" expanded="true" />
-            <element signature="e#2620#2636#0" expanded="true" />
-            <element signature="e#8323#8340#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/WordScordPredict2.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1010#1027#0" expanded="true" />
-            <element signature="e#1086#1103#0" expanded="true" />
-            <element signature="e#1165#1182#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/PredictFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/SentencePredcit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/textanalysis/TextAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.933332">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state vertical-scroll-proportion="1.7171854">
+          <caret line="54" column="44" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/textanalysis/SentencePredictScord2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.30166668">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

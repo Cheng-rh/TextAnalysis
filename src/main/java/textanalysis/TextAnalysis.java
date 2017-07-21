@@ -52,7 +52,7 @@ public class TextAnalysis {
                 break;
             }
         }
-        return score;
+        return (Double) score/(splitSentence.length);
     }
 
     /**
