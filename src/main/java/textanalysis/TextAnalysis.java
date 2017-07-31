@@ -27,7 +27,7 @@ public class TextAnalysis {
             classLoader = Thread.currentThread().getContextClassLoader();
         }
 
-        InputStream inputStream = classLoader.getResourceAsStream("中文停用词库3.ml");
+        InputStream inputStream = classLoader.getResourceAsStream("stop_words.ml");
 
         BufferedReader stopWordFileBr = null;
         try {
@@ -62,7 +62,7 @@ public class TextAnalysis {
         for(int i =0;i<splitSentence.length; ){
             if (senLoc.contains(i)){
                 senloc +=1;
-                score +=weiht*senWord.get(i);
+                score += weiht*senWord.get(i);
                 if (senloc < senLoc.size()-1){
                     for(int j = senLoc.get(senloc); j < senLoc.get(senloc+1) ; j++){
                         if (notLoc.contains(j)){
@@ -72,14 +72,17 @@ public class TextAnalysis {
                         }
                     }
                 }
+            }else if(notLoc.contains(i)){
+                score += weiht*(-5.0);
             }
+
             if(senloc < senLoc.size()-1){
                 i = senLoc.get(senloc+1);
             }else{
-                break;
+                i += 1;
             }
         }
-        return (Double) score/(splitSentence.length);
+        return score;
     }
 
     /**
@@ -325,14 +328,14 @@ public class TextAnalysis {
         StringBuffer tokenizerResult = new StringBuffer();
         for (SegToken token : tokens) {
             String word = token.word;
-            if(StringUtils.isBlank(word) || word.length() <= 1) {
+            if(StringUtils.isBlank(word) || word.length() < 1) {
                 continue;
             }
             if (!STOP_WORD_SET.contains(word)  ){
                     tokenizerResult.append(token.word).append(" ");
             }
         }
-        tokenizerResult.deleteCharAt(tokenizerResult.length()-1);
+//        tokenizerResult.deleteCharAt(tokenizerResult.length()-1);
         return tokenizerResult.toString();
 
     }

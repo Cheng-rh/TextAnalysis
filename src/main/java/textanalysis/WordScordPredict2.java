@@ -27,29 +27,36 @@ public class WordScordPredict2 implements PredictModel {
 
     }
 
-    public List predict(String sentence) throws Exception {
+    public List predict(String text) throws Exception {
 
         List preLab  = new ArrayList();
-        Map<Integer,Double> senWord = new LinkedHashMap<Integer, Double>();
-        Map<Integer,Double> notWord = new LinkedHashMap<Integer, Double>();
-        Map<Integer,Double> degreeWord = new LinkedHashMap<Integer, Double>();
-        String[] splitSentence = TextAnalysis.getSplitWord(sentence).split(" ");
+        Double sum = 0.0;
+        String[] sentences = text.split("。");
+        for (String sentence: sentences){
+            System.out.println(sentence);
+            Map<Integer,Double> senWord = new LinkedHashMap<Integer, Double>();
+            Map<Integer,Double> notWord = new LinkedHashMap<Integer, Double>();
+            Map<Integer,Double> degreeWord = new LinkedHashMap<Integer, Double>();
+            String[] splitSentence = TextAnalysis.getSplitWord(sentence).split(" ");
 
-        //将句子中的各类分词分别存储并记录其位置
-        for(int i = 0; i<splitSentence.length ; i++){
-            if( senDict.keySet().contains(splitSentence[i]) && !notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i]) ){
-                // 权重/句子长度，
-                senWord.put(i,senDict.get(splitSentence[i]));
-            }else if (notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i])){
-                notWord.put(i,-1.0);
-            }else if(degreeDict.keySet().contains(splitSentence[i])){
-                degreeWord.put(i,degreeDict.get(splitSentence[i]));
+            //将句子中的各类分词分别存储并记录其位置
+            for(int i = 0; i<splitSentence.length ; i++){
+                if( senDict.keySet().contains(splitSentence[i]) && !notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i]) ){
+                    // 权重/句子长度，
+                    senWord.put(i,senDict.get(splitSentence[i]));
+                }else if (notList.contains(splitSentence[i]) && !degreeDict.keySet().contains(splitSentence[i])){
+                    notWord.put(i,-1.0);
+                }else if(degreeDict.keySet().contains(splitSentence[i])){
+                    degreeWord.put(i,degreeDict.get(splitSentence[i]));
+                }
             }
-        }
 
-        //情感聚合
-        Double score = textAnalysis.scoreSent(senWord,notWord,degreeWord,splitSentence);
-        preLab.add(Math.tanh(score));
+            //情感聚合
+            Double score = textAnalysis.scoreSent(senWord,notWord,degreeWord,splitSentence);
+            sum = sum +score;
+        }
+        double predict = sum/sentences.length;
+        preLab.add(predict);
         return preLab;
     }
 }

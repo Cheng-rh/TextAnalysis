@@ -5,15 +5,28 @@ package textanalysis;
  */
 public class InputPath {
 
-
+    //词典匹配
     public String path;      // word-score 的路径(wordScore)
 
+    //libsvm
     public String negPATH;   //neg 的路径
     public String posPath;   //pos 的路径
 
+    //词权 + 否定词 + 程度副词
     public String emotionPath;
     public String denyPath;
     public String levelPath;
+
+    public String getStopWordPath() {
+        return stopWordPath;
+    }
+
+    public void setStopWordPath(String stopWordPath) {
+        this.stopWordPath = stopWordPath;
+    }
+
+    public String stopWordPath;
+
 
     public String getEmotionPath() {
         return emotionPath;

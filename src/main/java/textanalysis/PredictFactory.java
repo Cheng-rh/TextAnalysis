@@ -5,15 +5,17 @@ package textanalysis;
  */
 public class PredictFactory {
 
-    public static PredictModel newInstance( int mmethod){
-        if ( mmethod ==1 ){
+    public static PredictModel newInstance( int method){
+        if ( method ==1 ){
             return new MLlibPredict();
-        }else if (mmethod == 2) {
+        }else if (method == 2) {
             return new WordPredict();
-        }else if (mmethod ==3){
+        }else if (method ==3){
             return new WordScorePredict();
-        }else{
+        }else if (method == 4){
             return new WordScordPredict2();
+        }else{
+            return new WordScordPredict3();
         }
     }
 }
